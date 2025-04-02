@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const Introduction = () => {
   return (
-    <>
+    <div className="flex flex-col items-center gap-5">
       <Avatar className="w-[200px] h-[200px] shadow-md">
         <AvatarImage src="/profile.png" />
         <AvatarFallback>TJ</AvatarFallback>
@@ -14,7 +14,7 @@ const Introduction = () => {
           Generative AI & Enterprise Solutions Experts
         </h4>
       </div>
-    </>
+    </div>
   );
 };
 

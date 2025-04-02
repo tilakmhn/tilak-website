@@ -27,7 +27,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 left-6 z-50 w-[394px] h-[84px] p-5 rounded-lg shadow-md flex justify-between items-center">
+    <nav className="fixed top-6 left-6 z-50 w-[394px] h-[84px] p-5 bg-white rounded-lg shadow-md flex justify-between items-center">
       <span
         id="logo"
         className="font-semibold text-[18px] leading-7 tracking-normal"
@@ -35,8 +35,8 @@ const Navbar = () => {
         Tilak Joshi
       </span>
       <div id="nav-items" className="hidden tablet:flex">
-        {navItems.map((navItem) => (
-          <div>
+        {navItems.map((navItem, idx) => (
+          <div key={idx}>
             <a href={navItem.link}>{navItem.text}</a>
           </div>
         ))}
