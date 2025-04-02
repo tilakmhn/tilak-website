@@ -27,7 +27,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 left-6 w-[394px] h-[84px] p-5 rounded-lg shadow-md flex justify-between items-center">
+    <nav className="fixed top-6 left-6 z-50 w-[394px] h-[84px] p-5 rounded-lg shadow-md flex justify-between items-center">
       <span
         id="logo"
         className="font-semibold text-[18px] leading-7 tracking-normal"
