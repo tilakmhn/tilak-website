@@ -7,7 +7,7 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main className="flex w-full">
+      <main className="pt-[183px] max-w-[385px] mx-auto flex w-full">
         <About />
       </main>
     </>
