@@ -42,7 +42,7 @@ const Navbar = () => {
         ))}
       </div>
       <div id="nav-menu" className="flex gap-5 items-center">
-        <Button className="bg-blue-600 rounded-[6px] py-2.5 px-5 font-bold text-lg leading-6 gap-2.5 h-11">
+        <Button className="bg-primary rounded-[6px] py-2.5 px-5 font-bold text-lg leading-6 gap-2.5 h-11">
           Let's connect
         </Button>
         <Menu className="block tablet:hidden" />
