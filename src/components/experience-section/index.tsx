@@ -47,7 +47,7 @@ const Experience = () => {
         <Card className="w-full gap-2 b-0" key={idx}>
           <CardHeader className="w-full">
             <Avatar className="h-20 w-full">
-              <AvatarImage src={data.imageSrc} className="object-contain " />
+              <AvatarImage src={data.imageSrc} className="object-contain" />
               <AvatarFallback>DDL</AvatarFallback>
             </Avatar>
           </CardHeader>

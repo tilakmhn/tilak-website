@@ -43,7 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /* custom breakpoints */
-  --breakpoint-mobile: 440px;
+  --breakpoint-mobile: 480px;
   --breakpoint-tablet: 1024px;
   --breakpoint-laptop: 1440px;
 }
@@ -169,5 +169,9 @@
 }
 
 .heading-3 {
-  @apply text-2xl leading-8 tracking-[-0.6%];
+  @apply text-2xl leading-8 tracking-[-0.5%];
+}
+
+.heading-4 {
+  @apply text-xl leading-7 tracking-0;
 }

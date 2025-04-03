@@ -3,6 +3,7 @@ import Experience from "@/components/experience-section";
 import Expertise from "@/components/expertise-section";
 import HSeparator from "@/components/h-separator";
 import Navbar from "@/components/navigation-menu/navbar";
+import Projects from "@/components/projects";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <Experience />
         <HSeparator />
         <Expertise />
+        <HSeparator />
+        <Projects />
         <HSeparator />
       </main>
     </>
