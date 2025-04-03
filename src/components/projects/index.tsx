@@ -34,14 +34,14 @@ const projectItems = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <section id="projects" className="flex flex-col gap-10">
       <h2 className="heading-2 font-semibold">Recent AI Project Showcase</h2>
       <div className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-4 gap-4">
         {projectItems.map((project, idx) => (
           <ProjectCard {...project} key={idx} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

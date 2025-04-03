@@ -51,6 +51,7 @@
 
 :root {
   --radius: 0.625rem;
+  --nav-height: 5.25rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -165,16 +166,27 @@
   }
 }
 
+/* Automatically adds offset for all elements with IDs */
+/* To scroll to respective section from navbar */
+/* Ensures section is not hidden by navbar */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 30px);
+}
+
+.heading-1 {
+  @apply text-3xl mobile:text-4xl tablet:text-5xl leading-12 tracking-[-1.2%];
+}
+
 .heading-2 {
-  @apply text-3xl leading-8 tracking-[-0.6%];
+  @apply text-2xl mobile:text-3xl tablet:text-4xl leading-10 tracking-[-0.6%];
 }
 
 .heading-3 {
-  @apply text-2xl leading-8 tracking-[-0.5%];
+  @apply text-xl mobile:text-2xl tablet:text-3xl leading-8 tracking-[-0.5%];
 }
 
 .heading-4 {
-  @apply text-xl leading-7;
+  @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.2%];
 }
 
 .contact-card-gradient {

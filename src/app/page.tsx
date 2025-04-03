@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="pt-[183px] max-w-[385px] mx-auto flex flex-col w-full gap-20 mb-5">
+      <main className="pt-[calc(var(--nav-height)+40px)] mx-auto px-4 w-full max-w-screen-sm tablet:max-w-screen-md laptop:max-w-screen-lg flex flex-col gap-6 tablet:gap-8">
         <About />
         <HSeparator />
         <Experience />

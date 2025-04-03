@@ -42,7 +42,7 @@ const cardData = [
 
 const Experience = () => {
   return (
-    <div id="experience" className="flex flex-col gap-10">
+    <section id="experience" className="flex flex-col gap-10">
       {cardData.map((data, idx) => (
         <Card className="w-full gap-2 b-0" key={idx}>
           <CardHeader className="w-full">
@@ -57,7 +57,7 @@ const Experience = () => {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </section>
   );
 };
 

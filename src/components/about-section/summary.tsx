@@ -12,7 +12,10 @@ const Summary = () => {
         from healthcare conversational AI to financial data processing, with
         proven results in reducing operational costs and enhancing efficiency
       </h3>
-      <div id="metrics" className="flex gap-10 overflow-hidden">
+      <div
+        id="metrics"
+        className="flex flex-wrap justify-start laptop:justify-center gap-x-8 gap-y-4"
+      >
         {metrics.map((metric, idx) => (
           <h3 className="heading-3 font-semibold break-all" key={idx}>
             {metric}
