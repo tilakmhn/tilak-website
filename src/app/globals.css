@@ -173,5 +173,9 @@
 }
 
 .heading-4 {
-  @apply text-xl leading-7 tracking-0;
+  @apply text-xl leading-7;
+}
+
+.contact-card-gradient {
+  @apply bg-gradient-to-t from-white to-[#EFF6FF] via-[#EFF6FF] from-0% via-50%;
 }
