@@ -163,3 +163,11 @@
     --ring: 242 100% 60%;
   }
 }
+
+.heading-2 {
+  @apply text-3xl leading-8 tracking-[-0.6%];
+}
+
+.heading-3 {
+  @apply text-2xl leading-8 tracking-[-0.6%];
+}

@@ -8,7 +8,7 @@ const HeroHeadline = () => {
         <span className="italic text-blue-600">AI systems</span> that deliver
         measurable business value
       </h1>
-      <h3 className="text-2xl leading-8 tracking-[-0.6%] text-center">
+      <h3 className="heading-3">
         AWS Certified ML Specialist with Proven Results in Financial Services &
         Technology
       </h3>

@@ -1,5 +1,6 @@
 import About from "@/components/about-section";
 import Experience from "@/components/experience-section";
+import Expertise from "@/components/expertise-section";
 import HSeparator from "@/components/h-separator";
 import Navbar from "@/components/navigation-menu/navbar";
 
@@ -13,6 +14,8 @@ export default function Home() {
         <About />
         <HSeparator />
         <Experience />
+        <HSeparator />
+        <Expertise />
         <HSeparator />
       </main>
     </>

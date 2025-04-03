@@ -6,18 +6,15 @@ const metrics = [
 ];
 const Summary = () => {
   return (
-    <div
-      id="professional-summary"
-      className="flex flex-col gap-10 text-2xl leading-8 tracking-[-0.6%]"
-    >
-      <h3 className="font-normal">
+    <div id="professional-summary" className="flex flex-col gap-10">
+      <h3 className="heading-3 font-normal">
         I design cutting-edge AI systems that solve complex business challenges,
         from healthcare conversational AI to financial data processing, with
         proven results in reducing operational costs and enhancing efficiency
       </h3>
       <div id="metrics" className="flex gap-10 overflow-hidden">
         {metrics.map((metric, idx) => (
-          <h3 className="font-semibold break-all" key={idx}>
+          <h3 className="heading-3 font-semibold break-all" key={idx}>
             {metric}
           </h3>
         ))}

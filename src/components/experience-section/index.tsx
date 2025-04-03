@@ -44,7 +44,7 @@ const Experience = () => {
   return (
     <div id="experience" className="flex flex-col gap-10">
       {cardData.map((data, idx) => (
-        <Card className="w-full gap-2" key={idx}>
+        <Card className="w-full gap-2 b-0" key={idx}>
           <CardHeader className="w-full">
             <Avatar className="h-20 w-full">
               <AvatarImage src={data.imageSrc} className="object-contain " />
