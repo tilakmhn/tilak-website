@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="pt-[183px] max-w-[385px] mx-auto flex flex-col w-full gap-20">
+      <main className="pt-[183px] max-w-[385px] mx-auto flex flex-col w-full gap-20 mb-5">
         <About />
         <HSeparator />
         <Experience />
