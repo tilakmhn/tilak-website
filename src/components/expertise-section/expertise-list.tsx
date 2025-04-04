@@ -32,11 +32,11 @@ const expertiseItems: ExpertiseItem[] = [
 
 const ExpertiseList = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-4 tablet:gap-8 justify-center">
       {expertiseItems.map((item, idx) => (
         <div key={idx} className="flex items-center gap-5" id={item.id}>
           <Icon name={item.icon} className="shadow-md" />
-          <h3 className="heading-3 font-semibold">{item.title}</h3>
+          <h4 className="heading-4 font-semibold">{item.title}</h4>
         </div>
       ))}
     </div>
