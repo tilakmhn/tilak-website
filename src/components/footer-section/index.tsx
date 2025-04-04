@@ -1,58 +1,90 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 const footerLinks = [
   {
     text: "About",
-    link: "#",
+    link: "#about",
   },
   {
     text: "Experience",
-    link: "#",
+    link: "#experience",
   },
   {
     text: "Expertise",
-    link: "#",
+    link: "#expertise",
   },
-  {
-    text: "Testimonials",
-    link: "#",
-  },
+
   {
     text: "Projects",
-    link: "#",
+    link: "#projects",
   },
   {
     text: "Blog",
-    link: "#",
+    link: "/blog",
   },
 ];
 
+const LinkedInIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    className={cn(className)}
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const emailAddress = "demo@example.com";
+  const linkedinUrl = "https://www.linkedin.com/in/connectilak/";
+
   return (
-    <footer className="p-10 bg-[#06062C] text-primary-foreground flex flex-col gap-2">
-      <div className="flex flex-col gap-5">
+    <footer className="p-5 bg-footer text-primary-foreground flex flex-col tablet:flex-row tablet:justify-between gap-8">
+      <div className="flex flex-col tablet:items-start gap-5">
         <h3 className="heading-3 font-semibold">Tilak Joshi</h3>
+
+        <ul className="heading-5 font-semibold grid grid-cols-2 mobile:grid-cols-3 gap-5 text-lg tablet:flex tablet:justify-between">
+          {footerLinks.map((item) => (
+            <li key={item.text}>
+              <a
+                href={item.link}
+                className="hover:text-primary transition-colors"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="flex flex-col gap-5 text-lg font-normal leading-7">
-        {footerLinks.map((item, idx) => (
-          <li key={idx}>
-            <a href={item.link}>{item.text}</a>
-          </li>
-        ))}
-      </ul>
-      <div className="flex flex-col gap-10">
-        <div id="contact-buttons" className="flex items-center gap-10">
-          <button className="py-2.5 px-5 rounded-[6px] text-primary bg-background font-bold text-base leading-7">
-            Schedule a consultation
-          </button>
-          <div className="flex gap-2.5">
-            <Mail />
-            <Linkedin />
-          </div>
+
+      <div className="flex flex-col mobile:flex-row mobile:justify-between items-start tablet:items-center gap-5">
+        <div className="inline-flex gap-4 p-2">
+          <a
+            href={emailAddress}
+            target="_blank"
+            className="bg-background p-1.5 rounded-sm"
+          >
+            <Mail className="h-6 w-6 text-footer" />
+          </a>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            className="bg-background p-1.5 rounded-sm"
+          >
+            <LinkedInIcon className="h-6 w-6 text-footer" />
+          </a>
         </div>
-        <div id="copyright-info">
+        <div className="text-muted-foreground mobile:text-right">
           &copy; Copyright {currentYear} . Tilak Joshi
         </div>
       </div>

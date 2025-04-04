@@ -1,5 +1,4 @@
 import { Card, CardHeader, CardContent } from "../ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
 
 const cardData = [

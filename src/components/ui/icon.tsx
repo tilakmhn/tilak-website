@@ -1,4 +1,4 @@
-import { icons, type Icon as LucideIcon } from "lucide-react";
+import { icons} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {

@@ -1,4 +1,4 @@
-import { Icon as LucideIcon, icons } from "lucide-react";
+import { icons } from "lucide-react";
 import { Icon } from "../ui/icon";
 
 interface ExpertiseItem {

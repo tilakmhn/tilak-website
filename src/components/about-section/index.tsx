@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import CTAButtonsGroup from "./cta-buttons-group";
 import HeroHeadline from "./hero-headline";
 import Profile from "./profile";

@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <div className="flex gap-5 items-center">
           <Button className="bg-primary hidden mobile:inline-flex">
-            Let's connect
+            Let&apos;s connect
           </Button>
           <Menu className="block tablet:hidden" />
         </div>
