@@ -189,6 +189,14 @@
   @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.2%];
 }
 
+.heading-4 {
+  @apply text-base mobile:text-lg tablet:text-xl leading-6 tracking-tight;
+}
+
+.heading-6 {
+  @apply text-sm mobile:text-base tablet:text-lg leading-5 tracking-normal;
+}
+
 .contact-card-gradient {
   @apply bg-gradient-to-t from-white to-[#EFF6FF] via-[#EFF6FF] from-0% via-50%;
 }
