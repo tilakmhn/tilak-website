@@ -43,20 +43,23 @@ const cardData = [
 const Experience = () => {
   return (
     <section id="experience" className="flex flex-col gap-10">
-      {cardData.map((data, idx) => (
-        <Card className="w-full gap-2 b-0" key={idx}>
-          <CardHeader className="w-full">
-            <Avatar className="h-20 w-full">
-              <AvatarImage src={data.imageSrc} className="object-contain" />
-              <AvatarFallback>DDL</AvatarFallback>
-            </Avatar>
-          </CardHeader>
-          <CardContent className="text-2xl leading-8 tracking-[-0.6%]">
-            <h3 className="font-semibold">{data.title}</h3>
-            <h4 className="font-normal">{data.description}</h4>
-          </CardContent>
-        </Card>
-      ))}
+      <h2 className="heading-2 font-bold">Experience</h2>
+      <div className="grid grid-cols-1 mobile:grid-cols-2 gap-4 mobile:gap-6 tablet:gap-8">
+        {cardData.map((data, idx) => (
+          <Card className="w-full gap-2 b-0" key={idx}>
+            <CardHeader className="w-full">
+              <Avatar className="h-20 w-full">
+                <AvatarImage src={data.imageSrc} className="object-contain" />
+                <AvatarFallback>DDL</AvatarFallback>
+              </Avatar>
+            </CardHeader>
+            <CardContent>
+              <h3 className="heading-3 font-semibold">{data.title}</h3>
+              <h4 className="heading-4 font-normal">{data.description}</h4>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </section>
   );
 };

@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
+import { useActiveSection } from "@/app/hooks/use-active-section";
 
 const navItems = [
   {
@@ -26,14 +27,22 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const activeId = useActiveSection(navItems.map((item) => item.link.slice(1)));
+
   return (
     <header>
       <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-48px)] tablet:max-w-[1024px] mt-6 h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
         <span className="font-semibold text-lg">Tilak Joshi</span>
 
-        <div className="hidden tablet:flex gap-6">
+        <div className="hidden tablet:flex gap-6 heading-6 font-semibold">
           {navItems.map((item, idx) => (
-            <a key={idx} href={item.link} className="hover:text-primary">
+            <a
+              key={idx}
+              href={item.link}
+              className={
+                activeId == item.link ? "text-primary" : "text-foreground"
+              }
+            >
               {item.text}
             </a>
           ))}
