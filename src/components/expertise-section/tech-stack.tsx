@@ -59,7 +59,7 @@ const TechStack = () => {
         {technologies.map((tech) => (
           <div
             key={tech.title}
-            className="flex h-16 mobile:h-20 items-center justify-center p-2 rounded-lg"
+            className="flex h-16 mobile:h-20 items-center justify-center p-2"
             title={tech.title}
           >
             <Image

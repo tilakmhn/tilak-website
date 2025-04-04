@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
-import { useActiveSection } from "@/app/hooks/use-active-section";
+import { useActiveSection } from "@/hooks/use-active-section";
 
 const navItems = [
   {

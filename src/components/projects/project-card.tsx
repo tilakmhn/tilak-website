@@ -1,30 +1,28 @@
-import { Avatar, AvatarFallback } from "@radix-ui/react-avatar";
-import { AvatarImage } from "../ui/avatar";
+import { ProjectItem } from "@/constants/projects";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+import Image from "next/image";
 
-export interface ProjectItem {
-  title: string;
-  image: string;
-  description: string;
-  icons: string[];
-}
+// TODO: Either use svg for each logo or fix images look using CSS.
 
 const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
   return (
-    <Card className="shadow-md border-0">
-      <CardHeader>
-        <Avatar>
-          <AvatarImage src={image} className="object-contain" />
-          <AvatarFallback>IJ</AvatarFallback>
-        </Avatar>
+    <Card className="py-3 border-0 shadow-md hover:shadow-xl transition-shadow">
+      <CardHeader className="relative aspect-video p-0 overflow-hidden">
+        <Image src={image} alt={title} fill className="object-contain" />
       </CardHeader>
-      <CardContent>
-        <h3 className="heading-3 font-semibold">{title}</h3>
-        <h4 className="heading-4">{description}</h4>
+      <CardContent className="flex flex-col gap-4">
+        <h4 className="heading-4 font-semibold">{title}</h4>
+        <p className="heading-4">{description}</p>
       </CardContent>
-      <CardFooter className="flex justify-end items-center">
-        {icons.map((icon, idx) => (
-          <span key={idx}>{icon}</span>
+      <CardFooter className="px-8 py-4 flex flex-wrap justify-end gap-2">
+        {icons.map(({ title, path }, idx) => (
+          <div
+            key={idx}
+            className="relative h-7 w-7 mobile:h-9 mobile:w-9 p-4"
+            title={title}
+          >
+            <Image src={path} alt={title} fill className="object-contain" />
+          </div>
         ))}
       </CardFooter>
     </Card>

@@ -48,7 +48,7 @@ const Experience = () => {
       <div className="grid grid-cols-1 mobile:grid-cols-2 gap-4 tablet:gap-6">
         {cardData.map((data, idx) => (
           <Card
-            className="w-full gap-2 border-0 shadow-md h-full p-4 hover:shadow-xl transition-shadow"
+            className="w-full gap-2 border-0 h-full p-4 shadow-md hover:shadow-xl transition-shadow"
             key={idx}
           >
             <CardHeader className="w-full">
@@ -62,8 +62,8 @@ const Experience = () => {
               </div>
             </CardHeader>
             <CardContent className="flex flex-col gap-2">
-              <h3 className="heading-4 font-semibold">{data.title}</h3>
-              <h4 className="heading-4 font-normal">{data.description}</h4>
+              <h4 className="heading-4 font-semibold">{data.title}</h4>
+              <p className="heading-4 font-normal">{data.description}</p>
             </CardContent>
           </Card>
         ))}
