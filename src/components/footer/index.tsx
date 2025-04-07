@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="flex flex-col tablet:items-start gap-5">
         <h3 className="heading-3 font-semibold">Tilak Joshi</h3>
 
-        <ul className="heading-5 font-semibold grid grid-cols-2 mobile:grid-cols-3 gap-5 text-lg tablet:flex tablet:justify-between">
+        <ul className="heading-5 font-semibold grid grid-cols-2 mobile:grid-cols-3 gap-5 heading-4 tablet:flex tablet:justify-between">
           {footerLinks.map((item) => (
             <li key={item.text}>
               <a

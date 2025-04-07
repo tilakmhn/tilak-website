@@ -9,7 +9,7 @@ const ContactForm = () => {
       <h5 className="heading-5 font-semibold mb-4">
         If Time Slots are not Available:
       </h5>
-      <form className="max-w-sm">
+      <form className="w-full">
         <div className="mb-5">
           <label
             htmlFor="name"

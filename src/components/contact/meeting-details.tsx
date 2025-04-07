@@ -19,7 +19,7 @@ const MeetingDetails = () => {
       </div>
       <div
         id="meeting-info"
-        className="flex flex-col gap-3 tablet:gap-5 text-muted font-bold heading-4 mt-3 tablet:mt-5"
+        className="flex flex-col gap-3 tablet:gap-5 text-muted font-bold heading-5 mt-3 tablet:mt-5"
       >
         <div id="time" className="inline-flex gap-2 items-center">
           <CalendarClock className="h-4 w-4 tablet:h-6 tablet:w-6" />
