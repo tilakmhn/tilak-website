@@ -62,7 +62,7 @@ const Experience = () => {
             </CardHeader>
             <CardContent className="flex flex-col gap-2">
               <h4 className="heading-4 font-semibold">{data.title}</h4>
-              <p className="heading-4 font-normal">{data.description}</p>
+              <p className="heading-5 font-normal">{data.description}</p>
             </CardContent>
           </Card>
         ))}

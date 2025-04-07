@@ -3,7 +3,7 @@ import React from "react";
 
 const CTAButtonsGroup = () => {
   return (
-    <div className="flex flex-col gap-4 items-center heading-5 text-center">
+    <div className="flex flex-col mobile:flex-row gap-4 items-center mobile:justify-center heading-6 text-center">
       <Link
         href="/contact"
         className="bg-primary text-primary-foreground px-4 tablet:px-10 py-2.5 rounded-[6px] shadow-md font-bold"

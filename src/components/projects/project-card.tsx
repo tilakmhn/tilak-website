@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <h4 className="heading-4 font-semibold">{title}</h4>
-        <p className="heading-4">{description}</p>
+        <p className="heading-5">{description}</p>
       </CardContent>
       <CardFooter className="px-8 py-4 flex flex-wrap justify-end gap-2">
         {icons.map(({ title, path }, idx) => (
