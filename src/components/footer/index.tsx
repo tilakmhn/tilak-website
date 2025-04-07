@@ -67,10 +67,10 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="flex flex-col mobile:flex-row mobile:justify-between items-start tablet:items-center gap-5">
+      <div className="flex flex-col mobile:flex-row mobile:justify-between items-start mobile:items-center gap-5">
         <div className="inline-flex gap-4 p-2">
           <a
-            href={emailAddress}
+            href={`mailto:${emailAddress}`}
             target="_blank"
             className="bg-background p-1.5 rounded-sm"
           >

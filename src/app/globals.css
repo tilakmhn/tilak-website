@@ -64,7 +64,7 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --muted: oklch(56.58% 0.000 89.88);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
@@ -191,7 +191,7 @@
   @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.2%];
 }
 
-.heading-4 {
+.heading-5 {
   @apply text-base mobile:text-lg tablet:text-xl leading-6 tracking-tight;
 }
 

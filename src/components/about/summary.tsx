@@ -7,11 +7,11 @@ const metrics = [
 const Summary = () => {
   return (
     <div id="professional-summary" className="flex flex-col gap-10">
-      <h3 className="heading-3 font-normal">
+      <h4 className="heading-4 font-normal">
         I design cutting-edge AI systems that solve complex business challenges,
         from healthcare conversational AI to financial data processing, with
         proven results in reducing operational costs and enhancing efficiency
-      </h3>
+      </h4>
       <div
         id="metrics"
         className="flex flex-wrap justify-start laptop:justify-center gap-x-8 gap-y-4"
