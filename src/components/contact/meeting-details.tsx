@@ -2,8 +2,6 @@
 
 import React from "react";
 
-
-
 // Note that there is inner scroll inside Zcal Embed
 const ZcalEmbed: React.FC = () => {
   const srcUrl = "https://zcal.co/i/FBjMuOnu?embed=1&embedType=iframe";

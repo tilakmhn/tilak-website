@@ -8,7 +8,13 @@ const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
   return (
     <Card className="py-3 border-0 shadow-md hover:shadow-xl transition-shadow">
       <CardHeader className="relative aspect-video p-0 overflow-hidden">
-        <Image src={image} alt={title} fill className="object-contain" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <h4 className="heading-4 font-semibold">{title}</h4>
@@ -21,7 +27,13 @@ const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
             className="relative h-7 w-7 mobile:h-9 mobile:w-9 p-4"
             title={title}
           >
-            <Image src={path} alt={title} fill className="object-contain" />
+            <Image
+              src={path}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-contain"
+            />
           </div>
         ))}
       </CardFooter>

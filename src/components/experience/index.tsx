@@ -44,7 +44,7 @@ const Experience = () => {
   return (
     <section id="experience" className="flex flex-col gap-10">
       <h2 className="heading-2 font-bold">Experience</h2>
-      <div className="grid grid-cols-1 mobile:grid-cols-2 gap-4 tablet:gap-6">
+      <div className="grid grid-cols-1 mobile:grid-cols-2 gap-6 mobile:gap-8 tablet:gap-10">
         {cardData.map((data, idx) => (
           <Card
             className="w-full gap-2 border-0 h-full p-4 shadow-md hover:shadow-xl transition-shadow"
@@ -57,6 +57,7 @@ const Experience = () => {
                   alt={data.title}
                   fill
                   className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </CardHeader>

@@ -7,7 +7,7 @@ import Projects from "@/components/projects";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-10 mobile:gap-20 tablet:gap-25 items-center">
       <About />
       <HSeparator />
       <Experience />
@@ -17,6 +17,6 @@ export default function Home() {
       <Projects />
       <HSeparator />
       <ContactCard />
-    </>
+    </div>
   );
 }

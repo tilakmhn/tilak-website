@@ -8,9 +8,9 @@ const HubSpotForm = () => {
     script.src = "https://js.hsforms.net/forms/embed/48703427.js";
     document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
+    // return () => {
+    //   document.body.removeChild(script);
+    // };
   }, []);
 
   return (

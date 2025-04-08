@@ -21,7 +21,7 @@ const certificates = [
 
 const Profile = () => {
   return (
-    <div className="flex gap-6 flex-col items-center tablet:flex-row">
+    <div className="flex gap-6 tablet:gap-10 flex-col items-center tablet:flex-row">
       <div className="flex flex-col items-center gap-5 tablet:order-2">
         <Avatar className="w-32 h-32 tablet:w-48 tablet:h-48 shadow-md">
           <AvatarImage src="/profile.png" />
