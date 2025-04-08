@@ -20,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-lt-installed="true">
       <body className={`${inter.className}`}>
         <div className="flex flex-col gap-8" id="container">
           <Navbar />
 
-          <main className="pt-[calc(var(--nav-height)+40px)] mx-auto px-4 w-full max-w-screen-sm tablet:max-w-screen-md laptop:max-w-screen-lg flex flex-col gap-6 tablet:gap-8">
+          <main className="pt-[calc(var(--nav-height)+40px)] mx-auto px-4 w-full max-w-screen-mobile tablet:max-w-screen-tablet laptop:max-w-screen-laptop flex flex-col gap-6 tablet:gap-8">
             {children}
           </main>
 

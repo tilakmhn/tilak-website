@@ -35,7 +35,7 @@ const ExpertiseList = () => {
     <div className="flex flex-col gap-4 tablet:gap-8 justify-center">
       {expertiseItems.map((item, idx) => (
         <div key={idx} className="flex items-center gap-5" id={item.id}>
-          <Icon name={item.icon} className="shadow-md" />
+          <Icon name={item.icon} />
           <h4 className="heading-4 font-semibold">{item.title}</h4>
         </div>
       ))}
