@@ -1,46 +1,70 @@
 import { getAllPosts } from '@/lib/mdx'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+
+export const metadata = {
+  title: "Blog | Tilak Joshi",
+  description: "Read our latest articles and stay updated with the newest trends",
+};
 
 export default async function BlogPage() {
-  const posts = await getAllPosts() // Fetch all blog posts
+  const posts = await getAllPosts()
+  const [featuredBlog, ...allBlogs] = posts
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post) => (
+    <div className="flex flex-col gap-10 mobile:gap-20 tablet:gap-25">
+      {/* Featured Blog */}
+      <div className="flex flex-col gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 justify-center items-center bg-gradient-to-b from-white/20 to-blue-600/5 p-3 mobile:p-4 tablet:p-6 laptop:p-8 rounded-b-2xl">
+        <div className="rounded-2xl overflow-hidden w-full h-[60vh] mobile:h-[65vh] tablet:h-[70vh] laptop:h-[75vh]">
+          <Image
+            src={featuredBlog.image}
+            alt={featuredBlog.title}
+            width={1600}
+            height={900}
+            className="object-cover w-full h-full"
+            priority
+          />
+        </div>
+        <div className="flex flex-col gap-3 mobile:gap-4 tablet:gap-5 laptop:gap-6 w-full">
+          <h4 className="heading-4 font-extrabold">{featuredBlog.title}</h4>
+          <span className="heading-6">{featuredBlog.summary}</span>
           <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+            href={`/blog/${featuredBlog.slug}`}
+            className="bg-primary rounded-md max-w-fit text-background py-2 px-4 font-medium heading-6 hover:bg-primary/90 transition-colors"
           >
-            <div className="relative h-48 w-full">
+            Read more
+          </Link>
+        </div>
+      </div>
+
+      {/* Featured Insights */}
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+        <h3 className="heading-3 font-semibold">Featured Insights</h3>
+        {allBlogs.map((blog) => (
+          <div
+            key={blog.slug}
+            className="flex flex-col gap-4 mobile:gap-6 tablet:gap-8 laptop:gap-10 justify-center items-center bg-gradient-to-b from-white/20 to-blue-600/5 p-3 mobile:p-4 tablet:p-6 laptop:p-8 rounded-b-2xl w-full"
+          >
+            <div className="rounded-2xl overflow-hidden w-full">
               <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
+                src={blog.image}
+                alt={blog.title}
+                width={1200}
+                height={300}
+                className="object-cover w-full h-full max-h-[300px]"
               />
             </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-gray-600 mb-4 line-clamp-3">{post.summary}</p>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-500 mt-4">
-                {new Date(post.publishedAt).toLocaleDateString()}
-              </p>
+            <div className="flex flex-col gap-3 mobile:gap-4 tablet:gap-5 laptop:gap-6 rounded-b-2xl w-full">
+              <h4 className="heading-4 font-extrabold">{blog.title}</h4>
+              <span className="heading-6">{blog.summary}</span>
+              <Link
+                href={`/blog/${blog.slug}`}
+                className="bg-primary rounded-md max-w-fit text-background py-2 px-4 font-medium heading-6 hover:bg-primary/90 transition-colors"
+              >
+                Read more
+              </Link>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

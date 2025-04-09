@@ -7,6 +7,7 @@ import { getPostBySlug } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlogPostProps {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,14 @@ export default async function BlogPost({ params }: BlogPostProps) {
       {/* Main content section using MDX for rich content rendering */}
       <div className="prose prose-lg max-w-none"> 
         <MDXRemote source={post.content} />
+      </div>
+      <div className="mt-8">
+        <Link
+          href="/blog"
+          className="bg-primary rounded-md max-w-fit text-background py-2 px-4 font-medium heading-6 hover:bg-primary/90 transition-colors"
+        >
+          Back to Blog
+        </Link>
       </div>
     </article>
   );
