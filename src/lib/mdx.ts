@@ -13,7 +13,7 @@ export type BlogPost = {
 }
 
 // Define the content directory path
-const contentDirectory = path.join(process.cwd(), 'src/content')
+const contentDirectory = path.join(process.cwd(), 'src/content/blogs')
 
 /**
  * Retrieves all blog posts from the content directory
@@ -55,8 +55,11 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 export async function getPostBySlug(slug: string): Promise<BlogPost> {
   const fullPath = path.join(contentDirectory, `${slug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
+  // Serialize the MDX content for remote rendering
+  
   // Parse the file contents using gray-matter
   const { data, content } = matter(fileContents)
+
 
   return {
     slug,
