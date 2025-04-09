@@ -38,7 +38,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         summary: data.summary,
         tags: data.tags.split(',').map((tag: string) => tag.trim()),
         content,
-        image: data.image || '/images/default-blog.jpg'
+        image: data.image || '/blogs/default.jpg'
       }
     })
   )
@@ -65,6 +65,6 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
     summary: data.summary,
     tags: data.tags.split(',').map((tag: string) => tag.trim()),
     content,
-    image: data.image || '/blog/default.jpg'
+     image: data.image || '/blogs/default.jpg'
   }
 } 
