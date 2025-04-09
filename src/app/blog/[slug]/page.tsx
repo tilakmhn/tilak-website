@@ -3,14 +3,12 @@
  * This is a dynamic route that uses the [slug] parameter to fetch and display the corresponding blog post.
  */
 
-import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
-import { PostHeader } from "@/components/blog/post-header";
-import { PostContent } from "@/components/blog/post-content";
 import Link from "next/link";
-import { MoveLeftIcon } from "lucide-react";
+import { getPostBySlug, getAllPosts } from "@/lib/mdx";
+import { PostHeader, PostContent, RelatedPosts } from "@/components/blog";
 import ContactCard from "@/components/contact-card";
-import { RelatedPosts } from "@/components/blog/related-posts";
+import { MoveLeftIcon } from "lucide-react";
 
 interface BlogPostProps {
   params: Promise<{ slug: string }>;

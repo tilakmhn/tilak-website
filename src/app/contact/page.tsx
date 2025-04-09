@@ -1,7 +1,6 @@
 import React from "react";
-import ContactForm from "@/components/contact/contact-form";
-import MeetingDetails from "@/components/contact/meeting-details";
 import { Metadata } from "next";
+import { ContactForm, MeetingDetails } from "@/components/contact";
 
 export const metadata: Metadata = {
   title: "Contact | Tilak Joshi",

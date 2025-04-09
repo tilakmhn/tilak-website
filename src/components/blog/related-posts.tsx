@@ -8,7 +8,7 @@ interface RelatedPostsProps {
   posts: BlogPost[];
 }
 
-export function RelatedPosts({ posts }: RelatedPostsProps) {
+export default function RelatedPosts({ posts }: RelatedPostsProps) {
   return (
     <div className="container mx-auto px-4">
       <h2 className="text-2xl font-bold mb-6">Related Posts</h2>

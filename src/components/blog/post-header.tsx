@@ -8,7 +8,7 @@ interface PostHeaderProps {
   publishedAt: string;
 }
 
-export function PostHeader({ title, tags, image, publishedAt }: PostHeaderProps) {
+export default function PostHeader({ title, tags, image, publishedAt }: PostHeaderProps) {
   return (
     <header className="mb-8">
       <h1 className="text-4xl font-bold mb-4">{title}</h1>

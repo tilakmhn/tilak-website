@@ -1,5 +1,4 @@
-import FeaturedBlog from "@/components/blog/featured-blog";
-import FeaturedInsights from "@/components/blog/featured-insights";
+import { FeaturedBlog, FeaturedInsights} from "@/components/blog";
 import ContactCard from "@/components/contact-card";
 import { getAllPosts } from "@/lib/mdx";
 

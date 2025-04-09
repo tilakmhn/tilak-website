@@ -1,4 +1,3 @@
-import CTAButtonsGroup from "./cta-buttons-group";
 import Profile from "./profile";
 import Summary from "./summary";
 
