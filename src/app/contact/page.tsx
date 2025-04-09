@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <section
       id="contact"
-      className="px-4 py-5 flex flex-col gap-6 tablet:gap-8"
+      className="mobile:px-4 py-5 flex flex-col gap-6 tablet:gap-8"
     >
       <MeetingDetails />
 

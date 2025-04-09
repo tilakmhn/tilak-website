@@ -1,29 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
-// Note that there is inner scroll inside Zcal Embed
-const ZcalEmbed: React.FC = () => {
-  const srcUrl = "https://zcal.co/i/FBjMuOnu?embed=1&embedType=iframe";
+const MeetingCalendar = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
-    <iframe
-      src={srcUrl}
-      loading="eager"
-      id="zcal-invite"
-      title="Book a Consultation"
-      className="border-none w-full min-w-[320px] min-h-[544px] h-[801px] tablet:h-max overscroll-none! overflow-hidden! inline-flex [scrollbar-width:none] [-ms-overflow-style:none]"
-      scrolling="none"
-    ></iframe>
+    <div className="w-full">
+      <div
+        className="meetings-iframe-container"
+        data-src="https://meetings.hubspot.com/nitesh-pant/discovery-workshop?embed=true"
+      />
+    </div>
   );
 };
 
 const MeetingDetails = () => {
-  return (
-    <div className="flex flex-col justify-between items-center">
-      <ZcalEmbed />
-    </div>
-  );
+  return <MeetingCalendar />;
 };
 
 export default MeetingDetails;

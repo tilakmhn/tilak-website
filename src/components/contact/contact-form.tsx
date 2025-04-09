@@ -2,15 +2,16 @@
 
 import React, { useEffect } from "react";
 
+
 const HubSpotForm = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://js.hsforms.net/forms/embed/48703427.js";
     document.body.appendChild(script);
 
-    // return () => {
-    //   document.body.removeChild(script);
-    // };
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (

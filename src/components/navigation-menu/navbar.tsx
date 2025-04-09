@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex gap-4 items-center">
-          <Button className="bg-primary hidden mobile:inline-flex font-semibold" asChild>
+          <Button className="bg-primary hidden mobile:inline-flex heading-6 font-semibold" asChild>
             <Link href="/contact">Let&apos;s connect</Link>
           </Button>
           <button

@@ -1,4 +1,4 @@
-interface Blog {
+export interface Blog {
   title: string;
   description: string;
   image: string;
@@ -13,20 +13,20 @@ const blogs: Blog[] = [
     Traditional Software vs. GenAI Development
     Traditional software development has matured over decades, evolving robust methodologies, testing frameworks, and quality assurance processes. When a function returns an incorrect value, the bug is usually deterministic and reproducible.
     GenAI applications fundamentally differ:`,
-    image: "",
+    image: "/blogs/image-1.png",
   },
   {
     title:
       "Taming High-Dimensional Data: A Simple PCA FrameworkBuilding Enterprise RAG Pipelines with AWS Technologies",
     description: `Retrieval-Augmented Generation addresses one of the fundamental challenges in enterprise AI adoption: connecting powerful language models with organization-specific knowledge bases. We identified three key components in effective RAG pipelines:`,
-    image: "",
+    image: "/blogs/image-2.png",
   },
   {
     title:
       "Understanding Model Context Protocol (MCP): A New Era for AI Integrations",
     description:
       "In the rapidly evolving landscape of artificial intelligence, the Model Context Protocol (MCP) emerges as a groundbreaking standard that simplifies the integration of AI models with various tools and data sources. This document delves into the essence of MCP, its architecture, and how it revolutionizes the way AI systems interact with external services compared to traditional APIs. By providing a unified interface, MCP not only enhances the efficiency of AI integrations but also fosters a more dynamic and context-aware interaction model.",
-    image: "",
+    image: "/blogs/image-3.png",
   },
 ];
 
