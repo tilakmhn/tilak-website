@@ -19,7 +19,7 @@ const metrics = [
 const Summary = () => {
   return (
     <div id="professional-summary" className="flex flex-col gap-10">
-      <h4 className="heading-4 font-normal text-justify">
+      <h4 className="heading-4 font-normal text-pretty">
         I design cutting-edge AI systems that solve complex business challenges
         from healthcare conversational AI to financial data processing, with
         proven results in reducing operational costs and enhancing efficiency

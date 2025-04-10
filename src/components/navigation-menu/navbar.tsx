@@ -21,16 +21,16 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-48px)] tablet:max-w-6xl mt-6 h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
+      <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-48px)] mt-6 tablet:max-w-6xl h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
         <Link
           href="/"
-          className="font-semibold heading-4 cursor-pointer hover:text-primary"
+          className="font-semibold text-lg leading-7 tracking-normal cursor-pointer hover:text-primary"
         >
           Tilak Joshi
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden tablet:flex gap-6 text-base font-semibold">
+        <div className="hidden tablet:flex gap-6 text-base">
           {navItems.map((item) => (
             <a
               key={item.link}
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex gap-4 items-center">
-          <Button className="bg-primary hidden mobile:inline-flex heading-6 font-semibold" asChild>
+          <Button className="bg-primary hidden mobile:inline-flex text-base font-bold leading-6" asChild>
             <Link href="/contact">Let&apos;s connect</Link>
           </Button>
           <button
@@ -67,7 +67,7 @@ const Navbar = () => {
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="absolute tablet:hidden top-full left-0 right-0 bg-background mt-2 shadow-lg rounded-b-lg">
-            <div className="flex flex-col p-4 gap-3 heading-6 font-semibold">
+            <div className="flex flex-col p-4 gap-3 heading-6">
               {navItems.map((item) => (
                 <a
                   key={item.link}

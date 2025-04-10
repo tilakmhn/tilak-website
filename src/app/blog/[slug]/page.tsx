@@ -44,11 +44,11 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   return (
     <div className="mobile:px-4 py-5 flex flex-col gap-10 mobile:gap-20 tablet:gap-25">
-      <article className="container mx-auto px-4 py-8">
+      <article className="max-w-[760px] mx-auto px-4 py-8">
         <div className="mb-6">
           <Link
             href="/blog"
-            className="bg-primary rounded-md max-w-fit text-background py-2 px-4 font-medium heading-6 hover:bg-primary/90 transition-colors"
+            className="bg-gray-100 rounded-md max-w-fit py-2 px-3 text-sm"
           >
             <MoveLeftIcon className="w-6 h-6 inline-block mr-2" />
             Back to Blog

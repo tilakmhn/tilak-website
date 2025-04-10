@@ -21,12 +21,16 @@ const certificates = [
 
 const Profile = () => {
   return (
-    <div className="flex gap-6 tablet:gap-10 flex-col items-center tablet:flex-row">
+    <div className="flex gap-6 mobile:gap-8 tablet:gap-10 flex-col items-center tablet:flex-row">
       <div className="flex flex-col items-center gap-5 tablet:order-2">
-        <Avatar className="w-32 h-32 tablet:w-48 tablet:h-48 shadow-md">
-          <AvatarImage src="/profile.png" />
-          <AvatarFallback>TJ</AvatarFallback>
-        </Avatar>
+        <div className="max-h-[300px] max-w-[300px]">
+          <Image
+            src="/profile.png"
+            alt="Tilak Joshi"
+            width={300}
+            height={300}
+            className="rounded-full object-contain h-full w-full"
+        /></div>
         <div className="flex flex-col gap-2.5 items-center text-center">
           <h3 className="heading-3 font-semibold">Tilak Joshi</h3>
           <h4 className="heading-5 font-bold">

@@ -27,7 +27,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
     fileNames.map(async (fileName) => {
       const slug = fileName.replace(/\.mdx$/, '')
       const fullPath = path.join(contentDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const fileContents = fs.readFileSync(fullPath, 'utf-8')
       // Parse the file contents using gray-matter
       const { data, content } = matter(fileContents)
       

@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-lt-installed="true">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} scroll-smooth`}>
         <div className="flex flex-col gap-8" id="container">
           <Navbar />
 
-          <main className="pt-[calc(var(--nav-height)+40px)] mx-auto px-4 w-[calc(100%-24px)] mobile:[calc(100%-48px)] tablet:max-w-6xl flex flex-col gap-6 tablet:gap-8">
+          <main className="mt-[calc(var(--nav-height)+106px)] mx-auto w-[calc(100%-24px)] mobile:[calc(100%-48px)] tablet:max-w-[calc(var(--container-6xl)+10px)] flex flex-col gap-6 tablet:gap-8">
             {children}
           </main>
 
