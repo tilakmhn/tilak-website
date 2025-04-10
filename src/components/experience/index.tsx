@@ -51,13 +51,13 @@ const Experience = () => {
             key={idx}
           >
             <CardHeader className="w-full">
-              <div className="relative h-20 w-full">
+              <div className="relative p-0 overflow-hidden min-h-[200px]">
                 <Image
                   src={data.imageSrc}
                   alt={data.title}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={200}
+                  height={200}
+                  className="object-contain max-w-fit min-h-[200px]"
                 />
               </div>
             </CardHeader>

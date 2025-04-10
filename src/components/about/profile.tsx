@@ -33,7 +33,7 @@ const Profile = () => {
         /></div>
         <div className="flex flex-col gap-2.5 items-center text-center">
           <h3 className="heading-3 font-semibold">Tilak Joshi</h3>
-          <h4 className="heading-5 font-bold">
+          <h4 className="heading-6 font-semibold">
             Generative AI Practitioner & Full-Stack Implementation Consultant
           </h4>
         </div>
