@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useState } from "react";
-import { cn ,scrollToSection} from "@/lib/utils";
-
+import { cn, scrollToSection } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 const navItems = [
   { text: "About", link: "#about" },
   { text: "Experience", link: "#experience" },
@@ -16,12 +16,13 @@ const navItems = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeId = useActiveSection(navItems.map((item) => item.link.slice(1)));
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header>
-      <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-24px)] mobile:[calc(100%-48px)] tablet:max-w-[calc(var(--container-6xl)+40px)] h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
+      <nav className="fixed top-0 inset-x-0 mx-auto content-width h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
         <Link
           href="/"
           className="font-semibold text-lg leading-7 tracking-normal cursor-pointer hover:text-primary"
@@ -35,7 +36,7 @@ const Navbar = () => {
             <a
               key={item.link}
               href={item.link}
-              onClick={() => scrollToSection(item.link)}
+              onClick={() => scrollToSection(item.link, pathname)}
               className={cn(
                 "hover:text-primary transition-colors",
                 activeId === item.link && "text-primary"
@@ -73,7 +74,10 @@ const Navbar = () => {
                 <a
                   key={item.link}
                   href={item.link}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    scrollToSection(item.link, pathname);
+                    toggleMenu();
+                  }}
                   className={cn(
                     "py-2 px-4 rounded-lg hover:bg-gray-300",
                     activeId === item.link && "text-primary"

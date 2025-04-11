@@ -43,17 +43,16 @@ export default async function BlogPost({ params }: BlogPostProps) {
   const relatedPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
-    <div className="mobile:px-4 py-5 flex flex-col gap-10 mobile:gap-20 tablet:gap-25">
-      <article className="max-w-[760px] mx-auto px-4 py-8">
-        <div className="mb-6">
-          <Link
-            href="/blog"
-            className="bg-gray-100 rounded-md max-w-fit py-2 px-3 text-sm hover:text-white hover:bg-primary  transition-colors"
-          >
-            <MoveLeftIcon className="w-6 h-6 inline-block mr-2" />
-            Back to Blog
-          </Link>
-        </div>
+    <div className="mt-[var(--margin-blog)] mobile:px-4 py-5 flex flex-col gap-10 mobile:gap-20 tablet:gap-25">
+      <article className="max-w-[760px] mx-auto px-4 py-8 flex flex-col gap-10">
+        <Link
+          href="/blog"
+          className="bg-gray-100 font-semibold rounded-md max-w-fit py-2 px-3 text-sm hover:text-white hover:bg-primary transition-colors"
+        >
+          <MoveLeftIcon className="w-6 h-6 inline-block mr-2" />
+          Back to Blog
+        </Link>
+
         <PostHeader
           title={post.title}
           tags={post.tags}

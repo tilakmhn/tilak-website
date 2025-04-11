@@ -16,11 +16,11 @@ const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </CardHeader>
-      <CardContent className="flex flex-col gap-4">
-        <h4 className="heading-4 font-semibold">{title}</h4>
-        <p className="heading-5">{description}</p>
+      <CardContent className="flex flex-col gap-4 min-h-[100px]">
+        <h4 className="heading-3 font-semibold">{title}</h4>
+        <p className="heading-4">{description}</p>
       </CardContent>
-      <CardFooter className="px-8 py-4 flex flex-wrap justify-end gap-2">
+      <CardFooter className="px-8 py-2 flex flex-wrap justify-end gap-2">
         {icons.map(({ title, path }, idx) => (
           <div
             key={idx}

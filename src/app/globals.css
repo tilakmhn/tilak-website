@@ -55,6 +55,8 @@
 :root {
   --radius: 0.625rem;
   --nav-height: 5.25rem;
+  --margin-home: calc(var(--nav-height) + 70px);
+  --margin-blog: var(--nav-height);
   --footer-bg: oklch(15.88% 0.075 273.8);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -212,7 +214,6 @@ html {
   @apply text-xl mobile:text-[22px] tablet:text-2xl leading-8 tracking-[-0.006em];
 }
 
-
 .heading-4 {
   @apply text-lg tablet:text-xl leading-[28px] tracking-[-0.005em];
 }
@@ -227,4 +228,64 @@ html {
 
 .contact-card-gradient {
   @apply bg-gradient-to-t from-white to-[#EFF6FF] via-[#EFF6FF] from-0% via-50%;
+}
+
+/* content-width for main and navbar */
+.content-width{
+  @apply w-[calc(100%-60px)] mobile:w-[calc(100%-120px)] tablet:max-w-[calc(var(--container-6xl)+40px)]
+}
+
+/* Loading animation styles */
+.loader {
+  --loader-size: 100px;
+  --loader-color: var(--primary);
+  --loader-gap: 40px;
+  --loader-transparent: #0000;
+  --loader-gradient: var(--loader-color) var(--loader-gap),
+    var(--loader-transparent) 0 calc(100% - var(--loader-gap)),
+    var(--loader-color) 0;
+
+  width: var(--loader-size);
+  aspect-ratio: 1;
+  color: var(--loader-color);
+  position: relative;
+
+  background: conic-gradient(
+        from 134deg at top,
+        var(--loader-color) 92deg,
+        var(--loader-transparent) 0
+      )
+      top,
+    conic-gradient(
+        from -46deg at bottom,
+        var(--loader-color) 92deg,
+        var(--loader-transparent) 0
+      )
+      bottom;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--loader-gradient)),
+    linear-gradient(-45deg, var(--loader-gradient));
+  animation: l7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes l7 {
+  33% {
+    inset: -10px;
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -10px;
+    transform: rotate(90deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
 }

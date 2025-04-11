@@ -2,26 +2,45 @@
 
 import React, { useEffect } from "react";
 
+// To Fix type error
+declare global {
+  interface Window {
+    hbspt: {
+      forms: {
+        create: (options: {
+          region: string;
+          portalId: string;
+          formId: string;
+          target: string;
+        }) => void;
+      };
+    };
+  }
+}
 
 const HubSpotForm = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://js.hsforms.net/forms/embed/48703427.js";
+    script.src = "https://js.hsforms.net/forms/v2.js";
     document.body.appendChild(script);
+
+    script.addEventListener("load", () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          region: "na1",
+          portalId: "48703427",
+          formId: "58f29677-b92c-4100-81c9-79b806762aca",
+          target: "#hubspot-form-container",
+        });
+      }
+    });
 
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
-  return (
-    <div
-      className="hs-form-frame heading-5"
-      data-region="na1"
-      data-form-id="58f29677-b92c-4100-81c9-79b806762aca"
-      data-portal-id="48703427"
-    />
-  );
+  return <div id="hubspot-form-container" className="heading-5" />;
 };
 
 const ContactForm = () => {

@@ -28,6 +28,7 @@ export default function PostHeader({
   image,
   publishedAt,
 }: PostHeaderProps) {
+  const author = "Tilak Joshi";
   return (
     <header className="flex flex-col gap-6 mobile:gap-8 tablet:gap-10">
       <div className="flex flex-wrap gap-2 mb-4">
@@ -41,10 +42,10 @@ export default function PostHeader({
       </div>
       <div className="flex flex-col gap-7">
         <p className="font-bold text-xl leading-7 tracking-normal">
-          <span className="mr-2">Tilak Joshi </span>
+          <span className="mr-2">{author + ' .'}</span>
           {new Date(publishedAt).toLocaleDateString()}
         </p>
-        <h1 className="font-extrabold text-pretty text-2xl mobile:text-3xl tablet:text-5xl leading-12">
+        <h1 className="font-extrabold text-pretty text-2xl mobile:text-3xl tablet:text-5xl leading-12 tracking-[-0.0012em]">
           {title}
         </h1>
         <Tags tags={tags} />

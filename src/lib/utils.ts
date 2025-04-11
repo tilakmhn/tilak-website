@@ -5,13 +5,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function scrollToSection(sectionId: string) {
+export function scrollToSection(sectionId: string, pathname: string) {
+  if (pathname!== "/") return;
   const element = document.getElementById(sectionId);
   if (element) {
     const startPosition = window.scrollY;
     const targetPosition = element.getBoundingClientRect().top + startPosition;
     const distance = targetPosition - startPosition;
-    const duration = 1000; // 1 second duration
+    const duration = 2000; // 2 second duration
     let start: number | null = null;
 
     function animation(currentTime: number) {
