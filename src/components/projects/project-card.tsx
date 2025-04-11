@@ -6,25 +6,25 @@ import Image from "next/image";
 
 const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
   return (
-    <Card className="py-3 border-0 shadow-md hover:shadow-xl transition-shadow">
-      <CardHeader className="relative aspect-video p-0 overflow-hidden">
+    <Card className="py-6 tablet:py-10 px-6 tablet:px-10 border-0 shadow-md hover:shadow-xl transition-shadow">
+      <CardHeader className="relative aspect-square max-h-[200px]">
         <Image
           src={image}
           alt={title}
-          fill
+          width={200}
+          height={200}
           className="object-contain"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-4 min-h-[100px]">
         <h4 className="heading-3 font-semibold">{title}</h4>
         <p className="heading-4">{description}</p>
       </CardContent>
-      <CardFooter className="px-8 py-2 flex flex-wrap justify-end gap-2">
+      <CardFooter className="flex justify-end gap-1">
         {icons.map(({ title, path }, idx) => (
           <div
             key={idx}
-            className="relative h-7 w-7 mobile:h-9 mobile:w-9 p-4"
+            className="relative aspect-[3/2] h-6 mobile:h-7 tablet:h-10"
             title={title}
           >
             <Image
@@ -32,7 +32,7 @@ const ProjectCard = ({ title, description, image, icons }: ProjectItem) => {
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-contain"
+                className="object-contain"
             />
           </div>
         ))}

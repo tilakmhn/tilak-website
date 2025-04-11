@@ -18,6 +18,10 @@ export const projectItems: ProjectItem[] = [
       "Built a conversational AI system to create conversation summaries and a product support chatbot based on multiple data sources.",
     icons: [
       {
+        title: "AWS Bedrock",
+        path: "/technologies/aws-bedrock.png",
+      },
+      {
         title: "Langchain",
         path: "/technologies/langchain.png",
       },
@@ -63,11 +67,12 @@ export const projectItems: ProjectItem[] = [
     title: "Spoiler Shield",
     image: "/projects/spoiler-shield.png",
     description:
-      "A model analyzing customer relationship networks to identify distinct user segments.",
+      "Built a conversational AI system to create conversation summaries and a product support chatbot based on multiple data sources.",
+
     icons: [
       {
-        title: "AWS Sagemaker",
-        path: "/technologies/amazon-sagemaker.png",
+        title: "Google Colab",
+        path: "/technologies/google-colab.png",
       },
       {
         title: "Google Bert",
@@ -76,6 +81,10 @@ export const projectItems: ProjectItem[] = [
       {
         title: "Hugging Face",
         path: "/technologies/hugging-face.png",
+      },
+      {
+        title: "Pytorch",
+        path: "/technologies/pytorch.png",
       },
       {
         title: "Pandas",
@@ -87,7 +96,7 @@ export const projectItems: ProjectItem[] = [
     title: "Social Graph Customer Segmentation",
     image: "/projects/social-graph-customer-segmentation.png",
     description:
-      "Built a conversational AI system to create conversation summaries and a product support chatbot based on multiple data sources.",
+      "A model that analyzes customer relationship networks to identify distinct segments based on interactions and shared behaviors",
     icons: [
       {
         title: "AWS Sagemaker",
@@ -100,6 +109,10 @@ export const projectItems: ProjectItem[] = [
       {
         title: "Scikit Learn",
         path: "/technologies/scikit-learn.png",
+      },
+      {
+        title: "Pandas",
+        path: "/technologies/pandas.png",
       },
       {
         title: "Network X",

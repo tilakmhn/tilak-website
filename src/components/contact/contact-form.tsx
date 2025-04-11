@@ -28,7 +28,7 @@ const HubSpotForm = () => {
 
     script.addEventListener("load", () => {
       if (window.hbspt) {
-        const form =window.hbspt.forms.create({
+        window.hbspt.forms.create({
           region: "na1",
           portalId: "48703427",
           formId: "58f29677-b92c-4100-81c9-79b806762aca",
@@ -50,7 +50,7 @@ const HubSpotForm = () => {
 const ContactForm = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h5 className="heading-5 font-semibold">
+      <h5 className="heading-4 font-semibold text-center">
         If Time Slots are not Available:
       </h5>
       <div className="w-full">
