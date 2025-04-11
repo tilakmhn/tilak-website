@@ -214,7 +214,7 @@ html {
 
 
 .heading-4 {
-  @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.005em];
+  @apply text-lg tablet:text-xl leading-[28px] tracking-[-0.005em];
 }
 
 .heading-5 {
