@@ -5,9 +5,9 @@ const Expertise = () => {
   return (
     <section
       id="expertise"
-      className="flex flex-col gap-6 mobile:gap-8 tablet:gap-10"
+      className="flex flex-col w-full gap-6 mobile:gap-8 tablet:gap-10"
     >
-      <h2 className="heading-2 font-bold">Expertise</h2>
+      <h2 className="heading-2 font-semibold">Expertise</h2>
 
       <div className="flex flex-col mobile:flex-row gap-6 tablet:gap-8">
         <TechStack />
