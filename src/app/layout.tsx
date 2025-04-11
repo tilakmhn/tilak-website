@@ -25,7 +25,7 @@ export default function RootLayout({
         <div className="flex flex-col gap-8" id="container">
           <Navbar />
 
-          <main className="mt-[calc(var(--nav-height)+70px)] mx-auto w-[calc(100%-24px)] mobile:[calc(100%-48px)] tablet:max-w-[calc(var(--container-6xl)+10px)] flex flex-col gap-6 tablet:gap-8">
+          <main className="mt-[calc(var(--nav-height)+70px)] mx-auto w-[calc(100%-60px)] mobile:[calc(100%-120px)] tablet:max-w-[calc(var(--container-6xl)+40px)] flex flex-col gap-6 tablet:gap-8">
             {children}
           </main>
 

@@ -201,7 +201,7 @@ html {
 }
 
 .heading-1 {
-  @apply text-4xl mobile:text-[40px] tablet:text-5xl leading-12 tracking-[-0.012em];
+  @apply text-4xl mobile:text-[40px] tablet:text-5xl leading-12 tracking-[-0.0012em];
 }
 
 .heading-2 {
@@ -212,8 +212,9 @@ html {
   @apply text-xl mobile:text-[22px] tablet:text-2xl leading-8 tracking-[-0.006em];
 }
 
+
 .heading-4 {
-  @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.2%];
+  @apply text-lg mobile:text-xl tablet:text-2xl leading-7 tracking-[-0.005em];
 }
 
 .heading-5 {

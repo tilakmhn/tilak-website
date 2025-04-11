@@ -8,7 +8,7 @@ const HeroHeadline = () => {
       <span className="text-primary italic">production-ready AI systems</span> {' '}
       that deliver measurable value
     </h1>
-      <h2 className="text-2xl leading-8 tracking-[-0.006em] text-center tablet:text-left">
+      <h2 className="heading-3 text-center tablet:text-left">
       Bringing extensive experience across all layers of product development - from ideation to scalable cloud architecture
       </h2>
     </div>

@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-48px)] mt-6 tablet:max-w-6xl h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
+      <nav className="fixed top-0 inset-x-0 mx-auto w-[calc(100%-24px)] mobile:[calc(100%-48px)] tablet:max-w-[calc(var(--container-6xl)+40px)] h-[var(--nav-height)] px-5 bg-background z-50 rounded-lg shadow-md flex justify-between items-center">
         <Link
           href="/"
           className="font-semibold text-lg leading-7 tracking-normal cursor-pointer hover:text-primary"
