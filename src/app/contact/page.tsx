@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <section
       id="contact"
-      className="mobile:px-4 py-5 flex flex-col gap-6 tablet:gap-8"
+      className="mt-[var(--margin-blog)] mobile:px-4 py-5 flex flex-col gap-6 tablet:gap-8"
     >
       <h1 className="heading-1 font-semibold text-center">Build Your Next AI Strategy</h1>
       <MeetingDetails />

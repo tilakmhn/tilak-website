@@ -6,16 +6,11 @@ import { useActiveSection } from "@/hooks/use-active-section";
 import { useState } from "react";
 import { cn, scrollToSection } from "@/lib/utils";
 import { usePathname } from "next/navigation";
-const navItems = [
-  { text: "About", link: "#about" },
-  { text: "Experience", link: "#experience" },
-  { text: "Expertise", link: "#expertise" },
-  { text: "Projects", link: "#projects" },
-  { text: "Blog", link: "/blog" },
-];
+import { navLinks } from "../shared/constants";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const activeId = useActiveSection(navItems.map((item) => item.link.slice(1)));
+  const activeId = useActiveSection(navLinks.map((item) => item.link.slice(1)));
   const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -32,10 +27,10 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden tablet:flex gap-6 text-base">
-          {navItems.map((item) => (
+          {navLinks.map((item) => (
             <a
               key={item.link}
-              href={item.link}
+              href={pathname=="/" ? item.link:`/${item.link}`}
               onClick={() => scrollToSection(item.link, pathname)}
               className={cn(
                 "hover:text-primary transition-colors",
@@ -70,10 +65,10 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="absolute tablet:hidden top-full left-0 right-0 bg-background mt-2 shadow-lg rounded-b-lg">
             <div className="flex flex-col p-4 gap-3 heading-6">
-              {navItems.map((item) => (
+              {navLinks.map((item) => (
                 <a
                   key={item.link}
-                  href={item.link}
+                  href={pathname==="/" ? item.link:`/${item.link}`}
                   onClick={() => {
                     scrollToSection(item.link, pathname);
                     toggleMenu();

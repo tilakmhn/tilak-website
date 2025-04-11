@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
+import Loader from "@/components/ui/loader";
 
 // To Fix type error
 declare global {
@@ -18,6 +19,7 @@ declare global {
   }
 }
 
+// TODO: JS File can be stored in public folder as static file
 const HubSpotForm = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -26,12 +28,14 @@ const HubSpotForm = () => {
 
     script.addEventListener("load", () => {
       if (window.hbspt) {
-        window.hbspt.forms.create({
+        const form =window.hbspt.forms.create({
           region: "na1",
           portalId: "48703427",
           formId: "58f29677-b92c-4100-81c9-79b806762aca",
           target: "#hubspot-form-container",
+         
         });
+        
       }
     });
 
@@ -50,7 +54,9 @@ const ContactForm = () => {
         If Time Slots are not Available:
       </h5>
       <div className="w-full">
-        <HubSpotForm />
+        <Suspense fallback={<Loader />}>
+          <HubSpotForm />
+        </Suspense>
       </div>
     </div>
   );

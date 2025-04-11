@@ -1,30 +1,10 @@
+"use client"
 import { Mail } from "lucide-react";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import { navLinks } from "../shared/constants";
 
-const footerLinks = [
-  {
-    text: "About",
-    link: "#about",
-  },
-  {
-    text: "Experience",
-    link: "#experience",
-  },
-  {
-    text: "Expertise",
-    link: "#expertise",
-  },
-
-  {
-    text: "Projects",
-    link: "#projects",
-  },
-  {
-    text: "Blog",
-    link: "/blog",
-  },
-];
 
 const LinkedInIcon = ({ className }: { className?: string }) => (
   <svg
@@ -47,17 +27,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const emailAddress = "demo@example.com";
   const linkedinUrl = "https://www.linkedin.com/in/connectilak/";
-
+  const pathname = usePathname();
   return (
     <footer className="p-5 bg-footer text-primary-foreground flex flex-col tablet:flex-row tablet:justify-between gap-8">
       <div className="flex flex-col tablet:items-start gap-5">
         <h3 className="heading-3 font-semibold">Tilak Joshi</h3>
 
         <ul className="heading-5 font-semibold grid grid-cols-2 mobile:grid-cols-3 gap-5 heading-4 tablet:flex tablet:justify-between">
-          {footerLinks.map((item) => (
+          {navLinks.map((item) => (
             <li key={item.text}>
               <a
-                href={item.link}
+                href={pathname=="/" ? item.link:`/${item.link}`}
                 className="hover:text-primary transition-colors"
               >
                 {item.text}
