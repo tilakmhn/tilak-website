@@ -1,5 +1,7 @@
 import React from "react";
 import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const ContactCard = () => {
   return (
@@ -12,9 +14,9 @@ const ContactCard = () => {
         Available for consulting and architecture advisory roles
       </div>
       <div className="flex justify-center">
-        <button className="bg-primary text-primary-foreground py-2.5 px-5 font-bold text-base leading-6 rounded-[6px]">
-          Schedule a Consultation
-        </button>
+        <Button className="bg-primary text-primary-foreground py-2.5 px-5 font-bold text-base leading-6 rounded-[6px]" >
+          <Link href="/contact"> Schedule a Consultation </Link>
+        </Button>
       </div>
     </Card>
   );
