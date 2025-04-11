@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn ,scrollToSection} from "@/lib/utils";
 
 const navItems = [
   { text: "About", link: "#about" },
@@ -35,6 +35,7 @@ const Navbar = () => {
             <a
               key={item.link}
               href={item.link}
+              onClick={() => scrollToSection(item.link)}
               className={cn(
                 "hover:text-primary transition-colors",
                 activeId === item.link && "text-primary"

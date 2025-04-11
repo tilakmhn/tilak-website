@@ -48,7 +48,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
         <div className="mb-6">
           <Link
             href="/blog"
-            className="bg-gray-100 rounded-md max-w-fit py-2 px-3 text-sm"
+            className="bg-gray-100 rounded-md max-w-fit py-2 px-3 text-sm hover:text-white hover:bg-primary  transition-colors"
           >
             <MoveLeftIcon className="w-6 h-6 inline-block mr-2" />
             Back to Blog

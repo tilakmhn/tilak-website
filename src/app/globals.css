@@ -87,6 +87,29 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: var(--scroll-behavior);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .dark {
@@ -178,7 +201,7 @@
 }
 
 .heading-1 {
-  @apply text-3xl mobile:text-4xl tablet:text-5xl leading-12 tracking-[-1.2%];
+  @apply text-4xl mobile:text-[40px] tablet:text-5xl leading-12 tracking-[-0.012em];
 }
 
 .heading-2 {
@@ -186,7 +209,7 @@
 }
 
 .heading-3 {
-  @apply text-xl mobile:text-2xl tablet:text-3xl leading-8 tracking-[-0.5%];
+  @apply text-xl mobile:text-[22px] tablet:text-2xl leading-8 tracking-[-0.006em];
 }
 
 .heading-4 {
