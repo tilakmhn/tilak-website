@@ -24,14 +24,14 @@ const Summary = () => {
       </h4>
       <div
         id="metrics"
-        className="flex flex-col mobile:flex-row gap-4 tablet:gap-6"
+        className="grid grid-cols-1 mobile:grid-cols-3 gap-4 tablet:gap-6"
       >
         {metrics.map((metric, idx) => (
-          <div key={idx}>
+          <div key={idx} className="flex flex-col h-full">
             <h4 className="heading-3 font-semibold mb-2 tablet:mb-4">
               {metric.title}
             </h4>
-            <span className="text-lg mobile:text-xl leading-7 tracking-[-0.005em] italic">{metric.description}</span>
+            <span className="text-lg mobile:text-xl leading-7 tracking-[-0.005em] italic flex-grow">{metric.description}</span>
           </div>
         ))}
       </div>
