@@ -223,7 +223,7 @@ html {
 }
 
 .heading-6 {
-  @apply text-sm mobile:text-base tablet:text-lg leading-5 tracking-normal;
+  @apply text-sm mobile:text-base tablet:text-lg leading-6 tracking-normal;
 }
 
 .contact-card-gradient {
