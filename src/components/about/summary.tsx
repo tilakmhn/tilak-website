@@ -20,7 +20,7 @@ const Summary = () => {
   return (
     <div id="professional-summary" className="flex flex-col gap-y-10">
       <h4 className="heading-3 font-normal">
-      I design cutting-edge AI systems that solve complex business challenges, from healthcare conversational AI to financial data processing, with proven results in reducing operational costs and enhancing efficiency
+      I architect production-ready AI systems that deliver measurable value across all stages of product development, from initial concepts to scalable cloud solutions. My expertise helps organizations solve complex business challenges, with a proven track record in areas like healthcare conversational AI and financial data optimization, consistently reducing operational costs and enhancing efficiency.
       </h4>
       <div
         id="metrics"
