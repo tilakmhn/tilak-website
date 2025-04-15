@@ -1,5 +1,4 @@
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
 import HeroHeadline from "./hero-headline";
 import CTAButtonsGroup from "./cta-buttons-group";
