@@ -22,7 +22,7 @@ const CalCalendar = () => {
   return (
     <Cal
       namespace="30min"
-      calLink="gopal-khadka-k8a1hp/30min"
+      calLink="tjoshi/30min"
       style={{ width: "100%", height: "100%", overflow: "scroll" }}
       config={{ layout: "month_view", theme: "auto" }}
     />
